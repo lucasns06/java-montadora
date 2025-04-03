@@ -3,7 +3,6 @@ package br.com.montadora.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
 import br.com.montadora.model.Carro;
 
 public class CarroDAO {
@@ -34,6 +33,21 @@ public class CarroDAO {
 				return "Carro inserido com sucesso";
 			} else {
 				return "Erro inserir";
+			}
+		} catch (SQLException e) {
+			return e.getMessage();
+		}
+	}
+	
+	public String deletar(Carro carro) {
+		String sql = "delete from carro where nome = ?";
+		try {
+			PreparedStatement ps = getCon().prepareStatement(sql);
+			ps.setString(1,  carro.getNome());
+			if (ps.executeUpdate() > 0) {
+				return "Deletado com sucesso";
+			} else {
+				return "Erro deletar";
 			}
 		} catch (SQLException e) {
 			return e.getMessage();
