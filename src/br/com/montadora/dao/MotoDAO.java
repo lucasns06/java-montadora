@@ -38,5 +38,19 @@ public class MotoDAO {
 			return e.getMessage();
 		}
 	}
+	public String deletar(Moto moto) {
+		String sql = "delete from moto where nome = ?";
+		try {
+			PreparedStatement ps = getCon().prepareStatement(sql);
+			ps.setString(1,  moto.getNome());
+			if (ps.executeUpdate() > 0) {
+				return "Deletado com sucesso";
+			} else {
+				return "Erro deletar";
+			}
+		} catch (SQLException e) {
+			return e.getMessage();
+		}
+	}
 
 }
