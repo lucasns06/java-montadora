@@ -53,4 +53,21 @@ public class CarroDAO {
 			return e.getMessage();
 		}
 	}
+	
+	public String modificar(Carro carro) {
+		String sql = "update carro set montadora = (?) where nome = (?)";
+		try {
+			PreparedStatement ps = getCon().prepareStatement(sql);
+			ps.setString(1, carro.getMontadora());
+			ps.setString(2, carro.getNome());
+			if (ps.executeUpdate() > 0) {
+				return "Alterado com sucesso";
+			} else {
+				return "Erro ao alterar";
+			}
+		} catch (SQLException e) {
+			return e.getMessage();
+		}
+		
+	}
 }
