@@ -1,15 +1,14 @@
 package br.com.montadora.model;
 
-public class Carro extends Veiculo {
+public class Carro extends Veiculo{
 	
-	private int qtdePortas;
+	private int quantidadePortas;
 
-	public int getQtdePortas() {
-		return qtdePortas;
+	public int getQuantidadePortas() {
+		return quantidadePortas;
 	}
 
-	public void setQtdePortas(int qtdePortas) {
-		this.qtdePortas = qtdePortas;
+	public void setQuantidadePortas(int quantidadePortas) {
+		this.quantidadePortas = quantidadePortas;
 	}
-	
 }

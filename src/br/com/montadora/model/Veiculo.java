@@ -1,9 +1,8 @@
 package br.com.montadora.model;
 
 public class Veiculo {
-	
 	private String montadora;
-	private String nome;
+	private String nomeCarro;
 	
 	public String getMontadora() {
 		return montadora;
@@ -11,10 +10,11 @@ public class Veiculo {
 	public void setMontadora(String montadora) {
 		this.montadora = montadora;
 	}
-	public String getNome() {
-		return nome;
+	public String getNomeCarro() {
+		return nomeCarro;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeCarro(String nomeCarro) {
+		this.nomeCarro = nomeCarro;
 	}
+
 }

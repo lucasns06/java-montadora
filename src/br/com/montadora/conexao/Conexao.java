@@ -12,7 +12,7 @@ public class Conexao {
 			Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql://localhost:3307/montadora";
 			
-			//"jdbc:mysql://localhost:3306/montadora","root", "*123456HAS*"
+			//"jdbc:mysql://localhost:3306/teste","root", "*123456HAS*"
 			final String USER = "root";
 			final String PASS = "*123456HAS*";
 			
@@ -38,5 +38,5 @@ public class Conexao {
 			System.out.println(e.getMessage() + " Erro para fechar");
 		}
 	}
-	
+
 }

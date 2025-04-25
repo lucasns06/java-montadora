@@ -1,15 +1,16 @@
 package br.com.montadora.model;
 
-public class Moto extends Veiculo {
+public class Moto extends Veiculo{
+
+	private int quantidadeAdesivos;
+
+	public int getQuantidadeAdesivos() {
+		return quantidadeAdesivos;
+	}
+
+	public void setQuantidadeAdesivos(int quantidadeAdesivos) {
+		this.quantidadeAdesivos = quantidadeAdesivos;
+	}
 	
-	private int qtdeAdesivos;
-
-	public int getQtdeAdesivos() {
-		return qtdeAdesivos;
-	}
-
-	public void setQtdeAdesivos(int qtdeAdesivos) {
-		this.qtdeAdesivos = qtdeAdesivos;
-	}
 	
 }

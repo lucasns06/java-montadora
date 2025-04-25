@@ -13,13 +13,13 @@ public class CarroInserir {
 		Connection con = Conexao.abrirConexao();
 
 		Carro carro = new Carro();
-		CarroDAO carrodao = new CarroDAO(con);
+		CarroDAO carrodao = new CarroDAO(con);////////
 
-		carro.setQtdePortas(4);
-		carro.setNome("Marsselao");
-		carro.setMontadora("Tesla");
-		
+		carro.setMontadora("FORD");
+		carro.setNomeCarro("Eco Sport");
+		carro.setQuantidadePortas(4);
 		System.out.println(carrodao.inserir(carro));
-		Conexao.fecharConexao(con);
+
 	}
+
 }
